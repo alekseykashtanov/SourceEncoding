@@ -10,7 +10,7 @@ from math import log2
 
 def gen_code(q, size):
     result = []
-    code_len = 0
+    code_len = 1
     while q ** code_len < size:
         code_len += 1
     for i in range(size):
@@ -25,8 +25,9 @@ def gen_code(q, size):
 
 def print_encoding(hps, n, q):
     code = gen_code(q, len(hps))
+    print(code)
     print("Кодирование: ")
-    print("{:<10}\t{:<10}".format("<HPS_ELEM>", "<ENCODING_WORD>"))
+    print("{:<10}\t{}".format("<HPS_ELEM>", "<ENCODING_WORD>"))
     for i in range(len(hps)):
         print("{:<10}\t{:<10}".format(hps[i], code[i]))
 

@@ -27,8 +27,9 @@ try:
 		in_file.close()
 		out_file.close()
 except KeyError:
-	print("Вероятности символов заданы неверно! Проверьте файл и попробоуйте еще раз")
+	print("Вероятности символов заданы неверно! Проверьте файл и попробуйте еще раз")
 except IOError:
 	print("File opening/writing error")
-
+except ...:
+	print("Неизвестная ошибка")
 
